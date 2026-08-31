@@ -5,7 +5,7 @@ description: Write gaboesquivel.com pages, gaboesquivel package project copy, an
 
 # Gabo
 
-Product engineer running his own brand like a company: senior engineer across product, interface, and systems, and the sole operator of gaboesquivel.com's marketing, content, and positioning.
+Product engineer: senior engineer across product, interface, and systems. A senior engineer working where engineering decisions become product.
 
 Core line: I build useful and delightful software products.
 
