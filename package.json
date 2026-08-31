@@ -1,0 +1,10 @@
+{
+  "name": "gaboesquivel-skills",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Gabo Esquivel Agent Skills catalog",
+  "scripts": {
+    "validate": "bun scripts/validate-catalog.mjs"
+  }
+}
