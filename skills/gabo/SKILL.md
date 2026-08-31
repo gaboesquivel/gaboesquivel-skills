@@ -5,9 +5,9 @@ description: Write gaboesquivel.com pages and gaboesquivel package project copy 
 
 # Gabo
 
-Product engineer: senior engineer across product, interface, and systems.
+Product engineer: senior engineer across product, interface, and systems. A senior engineer working where engineering decisions become product.
 
-Core line: I build software products that make complex technology useful.
+Core line: I build useful and delightful software products.
 
 Audience: founders and technical or product leaders (direct hire, international hire, or contracting through Blockmatic Labs LLC). Recruiters: concise bio and `/cv`. Narrative pages are not alternate resumes.
 
