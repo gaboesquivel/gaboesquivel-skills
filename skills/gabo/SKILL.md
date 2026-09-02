@@ -62,7 +62,7 @@ When editing `gaboesquivel` project markdown:
 
 - `description`: what the project is and does, one or two sentences, near 160 characters, usable as metadata and a masonry card.
 - `role`, `achievements`, `story`: ownership and implementation.
-- `role` only when the website CV verifies it.
+- `role` only when `content/experience` verifies it.
 - Do not turn package copy into a career story.
 
 Field allowlists (`featured`, no `tier`/`outcome`) live in the package `project-copy` rule.
@@ -105,4 +105,6 @@ Same project, different information each time. If two pages would say the same s
 - Preserve verified technical substance when compressing.
 - See Repetition rule above for how projects may legitimately recur across pages.
 
-Facts: `gaboesquivel/gaboesquivel` `content` for projects and tech; for title, type, location, duration. On conflict, CV wins employment facts; package wins technology, architecture, achievements.
+Facts: package `content/projects` and `content/tech` for projects and technologies; package `content/experience` and `content/cv` for employment title, type, location, duration, and printable CV variants. On conflict, experience wins employment facts; project markdown wins technology, architecture, and achievements.
+
+Not this skill: per-route jobs (landing-pages rule), SEO keywords, package generate/link, Next.js upgrades.
