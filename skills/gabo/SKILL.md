@@ -24,17 +24,26 @@ Primary audience: founders and technical or product leaders evaluating Gabo for 
 
 ## Voice
 
-- First person, active, direct. Warm and occasionally playful. Natural language over professional-sounding language.
-- Senior engineer to senior engineer or technical founder, even in marketing and outreach copy.
+Sentence rules apply to blog, LinkedIn, Twitter/X, site narrative, package prose, titles, summaries, and OG text.
+
+- Active voice. First person for what you shipped or decided. Address the reader as `you` for a step they take. `we` only for a team Gabo was on. Package `description` stays project-centered, not first-person contribution.
+- Warm and plain: contractions, senior engineer to senior engineer or technical founder, ordinary words. Do not chase a joke or a twist.
 - Facts, decisions, constraints, ownership, outcomes. Specific implementation over broad claims.
 - Taste: software should be clear, thoughtful, and enjoyable, not only correct.
-- Project `description` is project-centered, not first-person contribution.
+- Articles (blog) should read as a continuous argument. Vary sentence length. Prefer a medium sentence that carries the last clause forward over three short declarations in a row. Subordinate and join related ideas. One short sentence may follow a longer one for emphasis; that is not the default rhythm. Ban staccato: three or more consecutive short independent sentences, and one-line paragraph stacking. Flow is how the explanation moves, not memoir or a personal-connection intro.
+- Landing pages, package fields, and Twitter/X stay tighter than articles. LinkedIn may flow across a few paragraphs and still must not become a blog post.
+- Ban the inversion refrain whose only job is to reject a frame and announce the real one, especially as its own paragraph or a closer. A contrast stays when both sides name a concrete boundary.
+- Ban filler: `easy`, `simple`, `quick`, `very`, `just`, `really`. Replace vague qualifiers with a specific claim you already have. Never invent a metric to satisfy this.
+- Ban AI tells: summary transitions (`With this setup complete…`), stop-start fragments, datasheet sentences (`provides`, `is configurable`), cold opens whose first sentence has no antecedent, personified artifacts, template framing. Citations, `I would`, and ordinary metaphor stay allowed.
+- A list stays when each item is a concrete part. Introduce it with a colon. A bold label is fine when the words after it say what the part does.
+- Post titles stay title case. H2 and H3 stay sentence case and name what the section contains. Ban generic headings: Takeaways, Overview, Notes, Conclusion.
 - Do not sound like a LinkedIn thought leader, pitch deck, motivational memoir, or printable domain CV.
 - Banned words and constructions: `passion`, `journey`, `reinforced`, `I remember when`, `I still remember`, `what struck me`, `this reinforced my belief`, `moment of realization`, `particularly meaningful`, `personal milestone`, `moment of transformation`, `deeply personal`, `personal connection`.
 - Banned pattern, not just banned words: do not make Gabo's emotional interpretation of a project the evidence. Prefer what was built, decided, constrained, or learned through implementation. Do not replace banned phrases with synonyms that recreate the same motivational-memoir structure.
-- Do not force every project or section to end with a lesson, principle, belief, or takeaway. Evidence can stand on its own.
+- Do not force every project or section to end with a lesson, principle, belief, or takeaway. Evidence can stand on its own. Do not close a piece with a proverb.
 - Marketing copy stays in this voice too: no hype, no growth-hacker energy, no engagement bait. If a draft starts to sound like a marketer instead of an engineer, cut it back.
-- These rules apply to `<title>`, H1, meta description, and OG/Twitter tags when those fields are part of the writing task, not only visible body prose.
+
+Cadence. Bad: "The useful question is not whether the prompt is good. It is what the next step is allowed to see. That is the work. The loop is simple." Good: "Prompt engineering is how you phrase one instruction, but an agent's later calls are assembled from everything the previous steps pulled in: files, tool results, memory, sometimes another agent's summary. Context engineering is deciding which of those tokens the next step is allowed to see."
 
 ## Evidence
 
@@ -56,6 +65,8 @@ Identify the piece's one job → gather package and CV facts → write → remov
 
 For marketing and content pieces — blog posts, LinkedIn, social, outreach — the same discipline applies: one job per piece, grounded in a real shipped fact, no borrowed claims from other pages, nothing invented to make the piece land harder.
 
+When researching, spawn read-only agents in parallel for lookups that do not invent copy: package project, tech, and experience facts, existing posts to link, and which page already owns a claim. One agent writes. Do not spawn to write, rewrite, outline, or find a better voice. Do not spawn when those facts are already in the open files.
+
 ## Package mode
 
 When editing `gaboesquivel` project markdown:
@@ -72,9 +83,10 @@ Field allowlists (`featured`, no `tier`/`outcome`) live in the package `project-
 When writing for blog, LinkedIn, or Twitter/X from this persona:
 
 - Start from one real, already-verified fact: a shipped feature, a decision made, a problem solved. Never start from a theme and invent supporting detail.
-- Blog: structured, practical, grounded in real experience. No one-line paragraph stacking. Can go deeper on implementation than social copy.
-- LinkedIn: thoughtful, natural, no exaggerated hooks, no false urgency.
-- Twitter/X: concise and sharp, no engagement bait, no thread-for-the-sake-of-a-thread padding.
+- Blog: open on the concrete situation and keep the argument moving in connected paragraphs. End on the last decision, constraint, or action. No summary section and no closing proverb. Go deeper on implementation than social copy.
+- LinkedIn: a few flowing paragraphs under the same sentence rules. Thoughtful, natural, no exaggerated hooks, no false urgency. Does not become a blog post.
+- Twitter/X: one or two complete sentences. No engagement bait, no thread-for-the-sake-of-a-thread padding.
+- Landing pages keep their capability thesis and the jobs in the landing-pages rule. Package fields keep their length.
 - One piece of source material can become multiple channel pieces, but each must be rewritten for its channel, not resized copy-paste of another.
 
 ## Repetition rule
