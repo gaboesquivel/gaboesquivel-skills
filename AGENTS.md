@@ -11,8 +11,7 @@ skills/gabo/SKILL.md
 Install:
 
 ```bash
-bunx skills@latest add gaboesquivel/gaboesquivel-skills --skill gabo
-bunx skills@latest add . --skill gabo
+bunx skills@latest add gaboesquivel/gaboesquivel-skills --skill gabo -y
 ```
 
 Run `bun run validate` before push.
