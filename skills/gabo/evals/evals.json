@@ -1,0 +1,23 @@
+{
+  "skill_name": "gabo",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "rewrite this draft so it sounds like gabo, not a pitch deck — keep only claims I already verified",
+      "expected_output": "Voice bans held, no invented metrics, project-centered where it is a description, no memoir",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "draft a linkedin post about context engineering vs prompt engineering — i want it to sound like me (gabo), not generic AI influencer stuff",
+      "expected_output": "Few flowing paragraphs, connected sentences, no passion/journey/memoir tropes, grounded in a real shipped angle if facts exist",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "say this out loud as a voice-agent line: what I actually shipped on voice for LegalAgent, no engagement bait",
+      "expected_output": "Tighter than a blog, not staccato, identity-safe, no invented users",
+      "files": []
+    }
+  ]
+}
