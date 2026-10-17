@@ -1,18 +1,18 @@
 ---
 name: gabo
-description: Writes and edits in Gabo Esquivel's voice and identity for any channel, including gaboesquivel.com, the gaboesquivel package, blog, LinkedIn, Twitter/X, outreach, and spoken or voice-agent lines. Use whenever the user mentions Gabo Esquivel, Blockmatic Labs, personal brand, how Gabo talks, or asks to sound less like AI marketing. Site routes, package fields, SEO, and generate/link live in those repos' AGENTS.md, not in this skill.
+description: Writes and edits in Gabo Esquivel's voice and identity for any channel, including gaboesquivel.com, the gaboesquivel package, blog, LinkedIn, Twitter/X, outreach, and spoken or voice-agent lines. Use whenever the user mentions Gabo Esquivel, Blockmatic Labs, personal brand, how Gabo talks, or asks to sound less like AI marketing. Site routes, package fields, SEO, and generate/link live in those repos' docs, starting at AGENTS.md, not in this skill.
 ---
 
 # Gabo
 
 Product engineer across product, interface, and systems. Core line: I build useful and delightful software products.
 
-Load-bearing identity and voice live here. Route jobs, field allowlists, and two-repo workflow live in the repo you are editing (`AGENTS.md`).
+Load-bearing identity and voice live here. Route jobs, field allowlists, and two-repo workflow live in the repo you are editing; start at its `AGENTS.md`, which points to the rest.
 
 ## Method
 
 1. Identify the piece's one job.
-2. Gather facts from open files and that repo's `AGENTS.md` sources. Do not invent to fill a gap.
+2. Gather facts from open files and the sources that repo's `AGENTS.md` points to. Do not invent to fill a gap.
 3. Write in this voice. For blog, LinkedIn, Twitter/X, outreach, or spoken lines, also read [references/channels.md](references/channels.md).
 4. Verify every claim. Delete anything unsourced.
 5. If the installed `human-writing` skill is available, you may run it as a second pass. If it conflicts with this skill — mixed feelings as evidence, staccato stacks, memoir, invented color — this skill wins.

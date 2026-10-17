@@ -1,6 +1,6 @@
 # Channels
 
-Portable length and shape. Site routes, blog IA, and package field lengths live in those repos' `AGENTS.md`.
+Portable length and shape. Site routes, blog IA, and package field lengths live in those repos' docs; start at their `AGENTS.md`.
 
 - Start from one real, already-verified fact: a shipped feature, a decision made, a problem solved. Never start from a theme and invent supporting detail.
 - Blog: open on the concrete situation and keep the argument moving in connected paragraphs. End on the last decision, constraint, or action. No summary section and no closing proverb. Go deeper on implementation than social copy.
