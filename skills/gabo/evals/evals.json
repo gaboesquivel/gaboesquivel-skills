@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "rewrite this draft so it sounds like gabo, not a pitch deck — keep only claims I already verified",
-      "expected_output": "Voice bans held, no invented metrics, project-centered where it is a description, no memoir",
+      "expected_output": "Voice bans held, no invented metrics, project-centered where it is a description, no memoir; cut portable filler, faux-insight openers, weasel words, and dramatic colon reveals",
       "files": []
     },
     {

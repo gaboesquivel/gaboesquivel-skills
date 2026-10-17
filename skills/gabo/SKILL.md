@@ -46,8 +46,16 @@ Sentence rules apply to blog, LinkedIn, Twitter/X, site narrative, package prose
 - Landing pages, package fields, and Twitter/X stay tighter than articles. LinkedIn may flow across a few paragraphs and still must not become a blog post.
 - Ban the inversion refrain whose only job is to reject a frame and announce the real one, especially as its own paragraph or a closer. A contrast stays when both sides name a concrete boundary.
 - Ban filler: `easy`, `simple`, `quick`, `very`, `just`, `really`. Replace vague qualifiers with a specific claim you already have. Never invent a metric to satisfy this.
+- Weasel words: `significantly`, `many`, `often`, `typically`, `generally`. Replace only with a claim already verified.
+- Portability test: if a sentence could move unchanged onto another engineer's site, cut it or replace it with a fact already in the draft.
+- Second-read test: if a sentence needs a second pass, name the subject, the action, and the consequence.
+- Metaphor verbs: `moves through`, `lands`, `carries`, `hits` when a literal step exists.
+- Marketing verbs: `delve`, `leverage`, `utilize`, `robust`, `cutting-edge`, `streamline`, `empower`.
+- Interpretive asides: `the key point is`, `this distinction matters`, `in other words`, when the previous sentence already showed it.
+- Faux-insight and throat-clearing: `what most people get wrong`, `here's what nobody tells you`, `here's the thing`, `let me be clear`.
+- Synonym cycling: repeat the project or technology name; do not rotate "the product," "the system," or "the platform."
 - Ban AI tells: summary transitions (`With this setup complete…`), stop-start fragments, datasheet sentences (`provides`, `is configurable`), cold opens whose first sentence has no antecedent, personified artifacts, template framing. Also cut copula padding (`serves as`, `stands as`, `marks a pivotal`), rule-of-three stacks, em-dash sales punch, conjunctive glue (`Moreover`, `Additionally`), inflated symbolism (`testament`, `evolving landscape`, `underscore`), and vague authorities (`experts believe`, `industry reports`). Citations, `I would`, and ordinary metaphor stay allowed. Do not import generic “mixed feelings / let some mess in” advice; that fights the bans below.
-- A list stays when each item is a concrete part. Introduce it with a colon. A bold label is fine when the words after it say what the part does.
+- A list stays when each item is a concrete part. Introduce lists with a colon. A bold label is fine when the words after it say what the part does. Colons are for lists and labels only; a noun phrase, a colon, then a dramatic reveal counts as the inversion refrain.
 - Post titles stay title case. H2 and H3 stay sentence case and name what the section contains. Ban generic headings: Takeaways, Overview, Notes, Conclusion.
 - Do not sound like a LinkedIn thought leader, pitch deck, motivational memoir, or printable domain CV.
 - Banned words and constructions: `passion`, `journey`, `reinforced`, `I remember when`, `I still remember`, `what struck me`, `this reinforced my belief`, `moment of realization`, `particularly meaningful`, `personal milestone`, `moment of transformation`, `deeply personal`, `personal connection`.
