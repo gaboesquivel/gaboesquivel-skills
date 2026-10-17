@@ -1,19 +1,14 @@
 # AGENTS.md
 
-Gabo Esquivel Agent Skills catalog. Read this file when adding or editing a catalog skill, changing layout or validation, or registering skills on [skills.sh](https://skills.sh).
-
-Human install commands: [README.md](README.md). Do not publish this repo to npm.
-
-## Git
-
-Use [Conventional Commits](https://www.conventionalcommits.org/): `type(scope): subject` (for example `docs: clarify catalog layout in AGENTS.md`, `feat(gabo): add channel reference`). Common types: `docs`, `feat`, `fix`, `chore`. Run `bun run validate` before pushing skill changes.
+Gabo Esquivel Agent Skills catalog: how its skills are laid out, added, changed, and checked. Install commands for people: [README.md](README.md). Do not publish this repo to npm.
 
 ## Layout
 
 - One skill per directory: `skills/<name>/SKILL.md`
 - No root `SKILL.md` (the CLI would treat the repo as a single skill)
 - Optional: `references/` (docs loaded on demand), `scripts/`, `evals/` (test prompts), `assets/` — link from `SKILL.md` with a clear when-to-read line
-- [skills.sh.json](skills.sh.json) groups skills on skills.sh; it does not change install behavior
+- Evals use the skill-creator format: `evals/evals.json` holds prompts with expected output, `evals/trigger-queries.json` holds queries that should and should not trigger the skill
+- [skills.sh.json](skills.sh.json) groups skills on [skills.sh](https://skills.sh); it does not change install behavior
 
 ## Adding a skill
 
@@ -24,9 +19,23 @@ Use [Conventional Commits](https://www.conventionalcommits.org/): `type(scope): 
 5. `bun run validate`
 6. Local check: `npx skills@latest add . --skill <name> --list`
 
-When a skill's behavior changes, update its `SKILL.md` (and disclosed `references/`). When discoverability changes, update frontmatter `description`. Do not duplicate gaboesquivel.com routes or package field rules in skills — those live in each consumer repo's `AGENTS.md`.
+## Changing a skill
+
+- Behavior: update `SKILL.md` and the `references/` it discloses. Update `evals/evals.json` when expected output changes.
+- Triggers: update the frontmatter `description` and `evals/trigger-queries.json`.
+- gaboesquivel.com and the gaboesquivel package record installed skills in `skills-lock.json`. After pushing, run `bun run skills:update` in each and commit the lock.
+
+Keep consumer-repo rules out of skills. Site routes, page jobs, and package field rules live in those repos' docs, starting at their `AGENTS.md`.
 
 Never use `@cursor/skills` paths in skill files. Do not put catalog skills in `~/.cursor/skills-cursor/` (Cursor-managed internals).
+
+## Checks
+
+`bun run validate` checks every `SKILL.md`: `name` matches its folder, `description` is one line of at most 1024 characters, and there are no `@cursor/skills` paths. It also checks that `skills.sh.json` lists exactly the skills under `skills/`. It does not check links, evals, `references/`, or the catalog table below. Run it before pushing skill changes.
+
+## Git
+
+Use [Conventional Commits](https://www.conventionalcommits.org/): `type(scope): subject` (for example `docs: clarify catalog layout in AGENTS.md`, `feat(gabo): add channel reference`). Common types: `docs`, `feat`, `fix`, `chore`.
 
 ## Skills in this catalog
 
@@ -34,6 +43,6 @@ Never use `@cursor/skills` paths in skill files. Do not put catalog skills in `~
 | --- | --- |
 | `gabo` | [skills/gabo/SKILL.md](skills/gabo/SKILL.md) — identity and voice |
 
-Companion (not in this catalog): [human-writing](https://www.skills.sh/factory-ai/factory-plugins/human-writing) in consumer repos as a second pass. If it fights `gabo`, `gabo` wins. Install commands: [README.md](README.md).
+Companion (not in this catalog): [human-writing](https://www.skills.sh/factory-ai/factory-plugins/human-writing), installed in consumer repos as a second pass. If it fights `gabo`, `gabo` wins. Do not vendor a copy here.
 
 Spec: [agentskills.io/specification](https://agentskills.io/specification). Authoring: [skill-creation best practices](https://agentskills.io/skill-creation/best-practices).

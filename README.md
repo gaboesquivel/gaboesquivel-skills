@@ -18,18 +18,12 @@ pnpm dlx skills@latest add gaboesquivel/gaboesquivel-skills --list
 bunx skills@latest add gaboesquivel/gaboesquivel-skills --list
 ```
 
-In writing repos, install [human-writing](https://www.skills.sh/factory-ai/factory-plugins/human-writing) next to `gabo`. It is a second pass; `gabo` wins conflicts. Do not copy it into this catalog.
+In writing repos, install [human-writing](https://www.skills.sh/factory-ai/factory-plugins/human-writing) next to `gabo`. It is a second pass; `gabo` wins conflicts.
 
 ```bash
 npx skills@latest add factory-ai/factory-plugins --skill human-writing -y
 ```
 
-Canonical copies of `gabo` land in `.agents/skills/gabo/`. Validate before pushing:
+Canonical copies of `gabo` land in `.agents/skills/gabo/`. Distribution is GitHub only.
 
-```bash
-bun run validate
-```
-
-Distribution is GitHub only. Do not publish this catalog to npm.
-
-Catalog layout and adding skills: [AGENTS.md](AGENTS.md).
+Layout, authoring, and checks for maintainers: [AGENTS.md](AGENTS.md).
