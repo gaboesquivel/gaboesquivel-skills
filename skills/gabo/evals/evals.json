@@ -4,20 +4,62 @@
     {
       "id": 1,
       "prompt": "rewrite this draft so it sounds like gabo, not a pitch deck — keep only claims I already verified",
-      "expected_output": "Voice bans held, no invented metrics, project-centered where it is a description, no memoir; cut portable filler, faux-insight openers, weasel words, and dramatic colon reveals",
-      "files": []
+      "expected_output": "Voice held, no invented metrics, no memoir, no pitch-deck language, sentences connected",
+      "files": [],
+      "expectations": [
+        "The output invents no metric, user count, quote, or outcome",
+        "The output contains none of these memoir words: passion, journey, moment of realization, personal milestone, what struck me",
+        "The output contains none of these pitch-deck words: robust, cutting-edge, seamless, leverage, delve, empower",
+        "The output does not place three or more short independent sentences in a row"
+      ]
     },
     {
       "id": 2,
       "prompt": "draft a linkedin post about context engineering vs prompt engineering — i want it to sound like me (gabo), not generic AI influencer stuff",
-      "expected_output": "Few flowing paragraphs, connected sentences, no passion/journey/memoir tropes, grounded in a real shipped angle if facts exist",
-      "files": []
+      "expected_output": "A few flowing paragraphs, connected sentences, no memoir, no invented metric",
+      "files": [],
+      "expectations": [
+        "The output is a few connected paragraphs, not a stack of one-line paragraphs",
+        "The output contains none of these memoir words: passion, journey, moment of realization, personal milestone",
+        "The output invents no metric, user count, or quote",
+        "The output does not place three or more short independent sentences in a row"
+      ]
     },
     {
       "id": 3,
       "prompt": "say this out loud as a voice-agent line: what I actually shipped on voice for LegalAgent, no engagement bait",
-      "expected_output": "Tighter than a blog, not staccato, identity-safe, no invented users",
-      "files": []
+      "expected_output": "A few connected sentences, tighter than a blog, no invented users, no engagement bait",
+      "files": [],
+      "expectations": [
+        "The output is a few sentences, not a post with sections or headings",
+        "The output invents no user count, quote, or metric",
+        "The output has no engagement bait: no rhetorical question, no 'I hope this helps', no follow-for-more",
+        "The output does not place three or more short independent sentences in a row"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "this hero sounds like AI, make the CTA convert.",
+      "expected_output": "Site copy with one verified shipped fact, no headline formula, no rhetorical question, no invented metric",
+      "files": ["evals/files/ai-hero.md"],
+      "expectations": [
+        "The output keeps or names one concrete fact already in the input: voice and chat, retrieval, or the line between the model and application logic",
+        "The output uses no headline formula such as How to, N ways to, or The secret to",
+        "The output asks no rhetorical question",
+        "The output invents no metric"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "humanize this post.",
+      "expected_output": "Seeded tells removed, facts unchanged, no memoir or mixed-feelings replacement, no three short sentences in a row",
+      "files": ["evals/files/humanize-draft.md"],
+      "expectations": [
+        "The output removes these seeded tells: Moreover, cutting-edge, showcasing, I hope this helps, moment of realization, journey, experts believe, testament, evolving landscape",
+        "The output keeps these facts: LegalAgent, attorneys, case context, voice or chat, Spanish or English",
+        "The output adds no mixed-feelings framing and no memoir replacement such as honestly, messy, I remember, or what struck me",
+        "The output does not place three or more short independent sentences in a row"
+      ]
     }
   ]
 }

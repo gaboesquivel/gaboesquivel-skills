@@ -18,12 +18,6 @@ pnpm dlx skills@latest add gaboesquivel/gaboesquivel-skills --list
 bunx skills@latest add gaboesquivel/gaboesquivel-skills --list
 ```
 
-In writing repos, install [human-writing](https://www.skills.sh/factory-ai/factory-plugins/human-writing) next to `gabo`. It is a second pass; `gabo` wins conflicts.
-
-```bash
-npx skills@latest add factory-ai/factory-plugins --skill human-writing -y
-```
-
 Canonical copies of `gabo` land in `.agents/skills/gabo/`. Distribution is GitHub only.
 
 Layout, authoring, and checks for maintainers: [AGENTS.md](AGENTS.md).

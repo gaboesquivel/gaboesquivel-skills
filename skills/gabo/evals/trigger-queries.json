@@ -32,6 +32,22 @@
     "should_trigger": true
   },
   {
+    "query": "humanize this post",
+    "should_trigger": true
+  },
+  {
+    "query": "write the /connect CTA on gaboesquivel.com so it converts",
+    "should_trigger": true
+  },
+  {
+    "query": "make my resume sound more impressive — add metrics where you can",
+    "should_trigger": true
+  },
+  {
+    "query": "linkedin thought leadership post about hustle culture and my transformation",
+    "should_trigger": true
+  },
+  {
     "query": "fix biome lint errors in my next.js api route",
     "should_trigger": false
   },
@@ -52,11 +68,7 @@
     "should_trigger": false
   },
   {
-    "query": "make my resume sound more impressive — add metrics where you can",
-    "should_trigger": false
-  },
-  {
-    "query": "linkedin thought leadership post about hustle culture and my transformation",
+    "query": "write pricing-page copy for someone else's SaaS",
     "should_trigger": false
   },
   {

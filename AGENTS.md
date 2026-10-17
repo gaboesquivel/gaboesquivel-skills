@@ -7,7 +7,7 @@ Gabo Esquivel Agent Skills catalog: how its skills are laid out, added, changed,
 - One skill per directory: `skills/<name>/SKILL.md`
 - No root `SKILL.md` (the CLI would treat the repo as a single skill)
 - Optional: `references/` (docs loaded on demand), `scripts/`, `evals/` (test prompts), `assets/` — link from `SKILL.md` with a clear when-to-read line
-- Evals use the skill-creator format: `evals/evals.json` holds prompts with expected output, `evals/trigger-queries.json` holds queries that should and should not trigger the skill
+- Evals use the skill-creator format: `evals/evals.json` holds prompts, `expectations`, and optional input files under `evals/files/`. `evals/trigger-queries.json` holds queries that should and should not trigger the skill
 - [skills.sh.json](skills.sh.json) groups skills on [skills.sh](https://skills.sh); it does not change install behavior
 
 ## Adding a skill
@@ -23,7 +23,8 @@ Gabo Esquivel Agent Skills catalog: how its skills are laid out, added, changed,
 
 - Behavior: update `SKILL.md` and the `references/` it discloses. Update `evals/evals.json` when expected output changes.
 - Triggers: update the frontmatter `description` and `evals/trigger-queries.json`.
-- gaboesquivel.com and the gaboesquivel package record installed skills in `skills-lock.json`. After pushing, run `bun run skills:update` in each and commit the lock.
+- Before pushing a change that adds, moves, or removes a rule or method step, or edits the description, run `evals/evals.json` against the previous version.
+- gaboesquivel.com and the gaboesquivel package record installed skills in `skills-lock.json`. After pushing, run `bunx skills@latest update gabo -p -y` in each writing repo and commit the lock.
 
 Keep consumer-repo rules out of skills. Site routes, page jobs, and package field rules live in those repos' docs, starting at their `AGENTS.md`.
 
@@ -42,7 +43,5 @@ Use [Conventional Commits](https://www.conventionalcommits.org/): `type(scope): 
 | Skill | Path |
 | --- | --- |
 | `gabo` | [skills/gabo/SKILL.md](skills/gabo/SKILL.md) — identity and voice |
-
-Companion (not in this catalog): [human-writing](https://www.skills.sh/factory-ai/factory-plugins/human-writing), installed in consumer repos as a second pass. If it fights `gabo`, `gabo` wins. Do not vendor a copy here.
 
 Spec: [agentskills.io/specification](https://agentskills.io/specification). Authoring: [skill-creation best practices](https://agentskills.io/skill-creation/best-practices).
