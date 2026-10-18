@@ -1,58 +1,59 @@
 # Gabo identity and writing refactor
 
-October 18, 2026. Baseline: commit `1044f5c3095903d3176ee44f8ecaf18fb5827e6f`. The working tree was clean at the start. Changes are confined to this catalog. Research is in [editorial-research.md](editorial-research.md); writing trials and checks are in [editorial-comparisons.md](editorial-comparisons.md).
+October 18, 2026. Baseline commits: original skill `1044f5c`; first refactor `42bf11c`; second pass (this document) tightens defaults after compact eval generation. Research stays in [editorial-research.md](editorial-research.md); samples in [editorial-comparisons.md](editorial-comparisons.md).
 
-## Diagnosis
+## First refactor (kept)
 
-The original skill had useful editorial judgment, but turned some preferences into universal constraints. Its own six tests passed in a baseline run: it was effective at removing unsupported claims and retaining implementation facts. The problem was coverage and scope, not a wholesale failure of concise or technical writing.
+- Identity in [skills/gabo/references/identity.md](../skills/gabo/references/identity.md); writing behavior in [skills/gabo/SKILL.md](../skills/gabo/SKILL.md).
+- No tell blacklist; factual guardrails; exact approved title, philosophy, and website paragraphs.
+- Distinct LinkedIn vs X; conditional hiring/calendar in outreach; trigger on writing on Gabo’s behalf, not mere mentions.
 
-| Original instruction | Observable problem | Decision |
+## Second-pass diagnosis
+
+| Issue | Evidence | Change |
 | --- | --- | --- |
-| Every claim must trace to an opened file | Excludes an explicit user brief as a source and conflates facts, beliefs, and hypothetical examples | Accept supplied material and distinguish those claim types |
-| Preserve the author's order and words for all edits; changes need one of five narrow reasons | Blocks restructuring even when a broader rewrite is requested | Keep narrow point edits; allow justified structure and audience changes for rewrites |
-| Specific implementation over broad claims; write to a senior engineer or technical founder | Makes a stack the default proof even for nontechnical readers | Let purpose and audience determine where technical detail belongs |
-| Fixed opening sequence, one move per sentence, prescribed medium/short rhythm | Competing formulas can fragment ideas or impose a technical explanation on another genre | Retain clarity and read-aloud review; use natural relationships and varied rhythm |
-| Cut every sentence that could appear on another engineer's site | Can reject truthful shared beliefs and even approved positioning | Assess the passage's specificity and meaning rather than its lexical uniqueness |
-| Any tell match must be fixed: qualifiers, metaphor verbs, rhetorical questions, reflection, beliefs as endings | Treats valid rhetorical choices as errors; “often” can express honest uncertainty | Remove the blacklist; retain contextual editing and factual guardrails |
-| LinkedIn and X share a one-paragraph, under-280-character output | A demonstrable channel mismatch; no separate About guidance | Distinct LinkedIn/X defaults and About guidance |
-| Every outreach message includes engagement terms and the calendar ask | Converts peer exchanges and thank-yous into hiring pitches | Include hiring details only when relevant to the purpose |
-| Trigger whenever Gabo or Blockmatic is named | Attracts code and third-party comparison tasks | Trigger on representation and writing on Gabo's behalf |
-| Package field voice rules repeated in the skill | Duplicates the package's authoritative field guidance | Defer field shape to the destination repo |
+| Default public outline taught in SKILL | Baseline About/intro listed human → agent → operations | Replaced “purpose → human → agent → expertise” with **lead with what the piece is about**; philosophy via examples, not a standing outline |
+| About channel guidance | “Connect role, product philosophy, and experience” invited pillar tours | One POV + supporting experience; close on insight, not a restated trio |
+| Eval suite overweight | 16 cases; many overlapped; prompts over-specified behavior | **13** distinct cases in [evals.json](../skills/gabo/evals/evals.json); synthetic personality fixtures; underspecified channel prompts |
+| Trigger queries sanitized | Many queries only triggered after adding “Gabo” | Restored **isolated** near-miss queries alongside named variants; routing judged from query wording alone (no ambient user identity) |
+| First comparison limitations | Self-graded; explicit length/hiring in prompts | Compact set + separate generation runs; blind review attempted (orchestrator fallback documented) |
 
-The bans on invented outcomes, false urgency, unsupported praise, and fabricated autobiography remain valuable. So do ownership accuracy, plain language, preserving technical details during compression, appropriate source reading, useful title conventions, retaining supplied links, and respecting the author's scope.
+## Trigger evaluation assumption
 
-## Architecture and scope inspected
+Each query in [trigger-queries.json](../skills/gabo/evals/trigger-queries.json) is evaluated on its own wording. Isolated queries such as “keep it in my usual voice” without naming Gabo are **should_not_trigger** unless the text clearly requests Gabo’s voice or site. Named variants remain **should_trigger**.
 
-The catalog has one skill, `gabo`, not separate identity and writing skills. Its original entrypoint combined method, identity, and voice; two references supplied channels and a mandatory tells checklist. All six original fixtures, six evals, and 19 trigger queries were read. There are no scripts or tool dependencies in the production skill.
+## Production files
 
-The installed `gabo` entrypoint and both references in the `gaboesquivel` package and `gaboesquivel.com` site were byte-identical to the original catalog copies. Their `AGENTS.md` files assign voice, identity, and claims to this catalog, with package employment records owning employment facts and destination docs owning routes and field shapes. Relevant `PRODUCT.md` sections were inspected read-only. The package's implementation-oriented field requirements are appropriate to structured project/technology records; they should not become universal rules for public narrative.
+Three files: `SKILL.md`, `references/identity.md`, `references/channels.md`. No `tells.md`. No external personality as style model in production instructions.
 
-Accessible global writing skills `writing-beats`, `writing-shape`, and `writing-fragments` are explicitly invoked authoring workflows, not dependencies of `gabo`. They permit vignettes, questions, analogies, and personal observations, which the old tells checklist could subsequently erase. Their interactive approval loops belong to those workflows; they are not needed for ordinary drafting with `gabo`. The installed workflow's `w-deslop` concerns code comments, defensive noise, and casts; `w-docs` concerns documentation ownership. Neither establishes a public voice.
+## Eval execution
 
-No ancestor `AGENTS.md` was found at `/`, `/Users`, `/Users/gabo`, or `/Users/gabo/Code`; the checked global `/Users/gabo/.codex/AGENTS.md` and `/Users/gabo/.claude/CLAUDE.md` were absent. This is a bounded inspection, not a claim to have inspected every application setting. Session-level assistant instructions also favor concise communication and constrain some rhetorical framing. A portable skill cannot override higher-priority runtime instructions, so identical output across hosts cannot be guaranteed.
+October 18, 2026. Fresh generators read the skill and the listed fixtures only. They did not read `evals.json`. Outputs are in [docs/eval-outputs/run/](eval-outputs/run/). Grading is against the expectations in [evals.json](../skills/gabo/evals/evals.json), not against the earlier hand-edited About sample in `docs/eval-outputs/candidate/`.
 
-No explicit Grug attribution or dependency was found in the inspected catalog or relevant guidance. Its provenance cannot be inferred from terse prose. The overextension resembles applying engineering minimalism to every genre, but that is an editorial diagnosis, not evidence that Grug caused it. Simplicity, pragmatism, clarity, and avoiding unnecessary abstraction remain valid engineering principles. The revised skill explicitly confines engineering guidance to engineering decisions and allows storytelling and positioning to serve their audience.
+Pitch and the LinkedIn/X post were regenerated after the skill was tightened, because the first run failed. The grades below are the latest files.
 
-## Smallest coherent change
+| Case | Result | Evidence |
+| --- | --- | --- |
+| 1 Pitch rewrite | Fail | 60% and the three verified facts are handled. The closer still adds “the work I want more of,” which is not a verified claim. |
+| 2 LinkedIn and X | Fail | Hero image, separate lengths, exact URL, and X at 170 characters pass. LinkedIn adds “the same retrieval scope the mobile client needs day to day,” which the post does not say. |
+| 3 LinkedIn About | Fail | Length, no hiring CTA, and no pillar-set opening pass. “what the product still gets wrong” is not in the fixtures. |
+| 4 Website intro | Pass | Names Gabo and the role, 57 words, does not paste the approved paragraphs. |
+| 5 Conference bio | Pass | Third person, title, fixture facts, 123 words. |
+| 6 Alex reply | Pass | Answers with LegalAgent facts, no calendar link or W-2 terms, 112 words. |
+| 7–8 Observation | Pass | Both keep the capability/work observation and the “finish what they came to do” point, without a pillar essay or a new anecdote. |
+| 9 Opinion post | Pass | Keeps the chat opinion and the workflow reason. |
+| 10 Disagreement reply | Pass | Agreement, narrow start, and expansion from use are all present. |
+| 11 Architecture | Pass | Required technologies and the feedback loop are present; authorization and reliability are named as unspecified; 133 words. |
+| 12 Punctuation | Pass | Same words; colon and question mark added. |
+| 13 Approved copy | Pass | Both paragraphs verbatim, no commentary. |
 
-Keep the existing skill and install name. Separate identity into `references/identity.md`, retain the channel reference, and delete `references/tells.md`. The number of production files stays at three. Identity now has one authoritative home; `SKILL.md` owns method and writing behavior. No new skill, framework, runtime dependency, or publishing process was introduced.
+Trigger queries were checked against the description wording only. Named Gabo, site, and package-prose queries match `should_trigger: true`. Isolated “my usual voice” queries, code tasks, and writing for someone else match `should_trigger: false`. That is a reading of the description, not a live router measurement.
 
-The identity reference preserves the exact approved title, philosophy, and two website paragraphs. It connects the three pillars through one product's purpose and adds only values supplied in the brief. Existing biography, technologies, domains, Wink work, languages, engagement terms, and location remain. Mountain Time alignment is preserved as a working arrangement, not treated as a geographic timezone claim. Hypothetical agent interfaces are not recast as shipped project experience.
+Two expectations were tightened so they match the review: source posts may not add claims the piece does not state, and an About section may not open or close by listing the three product concerns as its frame. Those checks are what failed in cases 2 and 3. The expectations were not loosened to absorb the failures.
 
-The writing principles favor audience needs, product purpose, supported judgment, natural warmth, flexible rhythm, and concrete specificity. They permit technical detail, examples, reflection, and qualifying language when useful. Optimism must distinguish demonstrated capability from possibility. This expresses Gabo's approved direction without importing a researched speaker's identity, vocabulary, or accomplishments. Research sources remain outside the production files.
+## Remaining uncertainty
 
-The entrypoint decreased from 976 to 645 whitespace-delimited words (about 34%). Total production instructions decreased from 2,013 to 1,681 words (about 16%), while adding the approved philosophy and copy. These are word counts, not tokenizer measurements. Identity and channel guidance are disclosed when relevant; most personal writing will still need identity.
-
-## Evaluation changes
-
-Original eval prompts 1–6 and their factual fixtures remain. Expectations that enforced word bans and rigid sentence counts now assess factual preservation, unsupported claims, and readable relationships. Eval 2 intentionally changes from a single shared social draft to separate channel drafts; this is a documented behavior change, not a regression disguised as a pass.
-
-Eight comparable sample prompts cover the requested formats. Two additional checks protect punctuation-only editing of a supplied reflection and verbatim approved copy. The shared positioning fixture ensures the old skill also receives the new brief; otherwise an apparent improvement might merely reflect additional facts. The trigger suite now includes explicit author context where formerly ambiguous, plus positive biography/philosophy requests and negative mere-mention cases. These assertions assess routing intent; they do not measure a deployed skill selector's precision.
-
-## Remaining issues
-
-- The strongest remaining test is Gabo's judgment of real drafts over time. Warmth and distinctiveness are not reliably established by a single self-graded generation pass.
-- Baseline prompts explicitly request length and peer outreach, so they can override old defaults. Comparisons should not exaggerate how badly the original skill performed.
-- Installed consumers still hold the original version. Publication and lock updates are intentionally outside this request, which excludes website and unrelated repository changes. Updating those consumers later should use their existing skills CLI workflow.
-- Runtime instructions can still suppress certain choices. Revisit a specific conflicting host instruction only when its effect is observed; do not add more compensating prohibitions to this skill.
-- Employment and project records remain the source for future achievements. The philosophy is permission to express a viewpoint, not permission to infer new experience.
+- Cases 1–3 still add a sentence the sources do not support. Further instruction after two regenerations did not remove that habit. Those failures stay in the run files.
+- Warmth and “sounds like Gabo” still need your review over time.
+- Host-level assistant instructions can still bias brevity or tone.
+- Consumer repos still pin an older skill until explicitly updated.

@@ -1,0 +1,1 @@
+I'm Gabo Esquivel, an Agentic Product Engineer. I work across product, design, and architecture on 0→1 products—lately voice, chat, and RAG on LegalAgent's React Native app, and before that engineering leadership for Wink, Costa Rica's first neobank, from architecture to launch. I've spent 15+ years shipping software for startups and growth-stage teams in FinTech, Web3, and AI.

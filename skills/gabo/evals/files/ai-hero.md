@@ -1,1 +1,0 @@
-I build the parts of an AI product around the model: the voice and chat people use, the retrieval that decides what the model gets to see, and the controls a team needs once the assistant is live. Most of the work is drawing the line between what the model decides and what stays ordinary application logic.

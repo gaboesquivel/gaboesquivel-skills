@@ -1,0 +1,1 @@
+I keep running into products that look capable on paper and still make a simple task feel like work. That gap is what sticks with me. When I'm evaluating software, I'm less interested in the feature list and more in whether someone can finish what they came to do.

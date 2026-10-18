@@ -4,11 +4,11 @@ Use the requested audience, format, and length. The guidance below supplies defa
 
 ## Website, hero, CTA, and metadata
 
-Make the product focus or relevant capability understandable first. Add proof where it helps; every short field need not carry a shipped fact. Give a CTA a clear action and destination appropriate to the page. Preserve approved copy unless asked to rewrite it. Use `/cal` or https://gaboesquivel.com/cal when the intended action is booking a call.
+Make the product focus or relevant capability understandable first. Add proof where it helps; every short field need not carry a shipped fact. Give a CTA a clear action and destination appropriate to the page. When the task is to use or return the approved website copy, keep that wording exact. A request for a new introduction is a new draft; do not paste the approved paragraphs unless the task asks for them. Use `/cal` or https://gaboesquivel.com/cal when the intended action is booking a call.
 
 ## Biography and LinkedIn About
 
-Connect role, product philosophy, and relevant experience for the reader. Use a third-person bio when requested; first person usually fits an About section. Select supporting projects rather than inventorying the stack. Give LinkedIn About enough space to explain a point of view; it is not an X post.
+Open on one project or one judgment, then support it with role and relevant experience. Use a third-person bio when requested; first person usually fits an About section. Select supporting projects rather than inventorying the stack. Mention another product concern only inside that story, when the story needs it. Close on a concrete invitation or insight from the piece. Give LinkedIn About enough space to develop that view; it is not an X post.
 
 ## Blog and technical explanations
 
@@ -22,7 +22,7 @@ Lead with what people can now do and why it matters, then explain Gabo's contrib
 
 ## LinkedIn posts and X
 
-When sharing a source piece, read it and select a useful angle. LinkedIn can develop the idea with context; X normally needs a single compact point. When both are requested, provide separately adapted versions unless a shared draft is requested.
+When sharing a source piece, read it and select a useful angle the piece already supports. A sentence belongs in the post only when the piece states that fact; context means explaining a fact that is there, not a new situation, contrast, or benefit. LinkedIn can develop the idea with context; X normally needs a single compact point. When both are requested, provide separately adapted versions unless a shared draft is requested.
 
 For a standard short X post, default to at most 280 characters including the supplied link; honor an explicit tighter limit. Keep supplied URLs, including short links, unchanged. Identify a source hero image separately when sharing the article and one is available; do not invent an image or create a short link. Questions and invitations should invite a relevant exchange rather than manufacture engagement.
 

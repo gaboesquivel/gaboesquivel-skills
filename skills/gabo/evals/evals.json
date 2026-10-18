@@ -3,187 +3,145 @@
   "evals": [
     {
       "id": 1,
+      "name": "Pitch rewrite",
       "prompt": "rewrite this draft so it sounds like gabo, not a pitch deck — keep only claims I already verified",
-      "expected_output": "Preserve verified LegalAgent and Wink work while removing unsupported results and generic promotion; retain connected, readable prose without adding irrelevant biography.",
-      "files": [
-        "evals/files/pitch-draft.md",
-        "evals/files/legal-agent.md"
-      ],
+      "expected_output": "Preserve verified LegalAgent and Wink work while removing unsupported results and generic promotion.",
+      "files": ["evals/files/pitch-draft.md", "evals/files/legal-agent.md"],
       "expectations": [
         "The output drops the claim that attorney research time fell by 60%, which no input supports",
         "The output keeps all three verified facts from the draft: voice and chat in LegalAgent's React Native Expo app, RAG for case context, document summaries, and procedural guidance, and leading engineering for Wink from architecture to launch",
         "The output adds nothing from the Identity list (years of experience, languages, time zone, engagement terms, the public role \"Agentic Product Engineer\", or a stack list)",
         "The output replaces unsupported superlatives and generic promotion with the verified work rather than merely swapping synonyms",
-        "The output makes no claim that users love the products and no unsupported claim about the author’s feelings",
-        "The output connects ideas naturally and is readable without a rigid sentence-length formula"
+        "The output makes no claim that users love the products and no unsupported claim about the author's feelings"
       ]
     },
     {
       "id": 2,
+      "name": "LinkedIn and X from URL",
       "prompt": "linkedin and x https://gaboesquivel.com/blog/2026-10-legal-agent",
-      "expected_output": "Separate LinkedIn and X drafts adapted to their audiences, with the source hero image identified separately and the original link retained. LinkedIn may explain context; X is at most 280 characters including its link. No invented claims or link-creation calls.",
-      "files": [
-        "evals/files/legal-agent-post.md"
-      ],
+      "expected_output": "Separate LinkedIn and X drafts; hero image named separately; original URL retained; X within 280 characters including link.",
+      "files": ["evals/files/legal-agent-post.md"],
       "expectations": [
         "The hero image from the piece is named separately from the post copy",
         "The output provides distinct LinkedIn and X versions rather than imposing the X length on both",
-        "Each version uses verified facts from the piece and gives the reader an understandable point",
+        "Each version's claims stay within the source piece, and each version gives the reader an understandable point",
         "Each version keeps the exact supplied URL; no substitute short link is created",
         "The X post including its link is at most 280 characters",
-        "The output invents no metric, user count, quote, reaction, or availability",
-        "Any invitation or question serves the topic rather than demanding likes or follows",
-        "The transcript shows no link-creation call"
+        "The output invents no metric, user count, quote, reaction, or availability"
       ]
     },
     {
       "id": 3,
-      "prompt": "say this out loud as a voice-agent line: what I actually shipped on voice for LegalAgent, no engagement bait",
-      "expected_output": "Two to four connected spoken sentences naming shipped voice details from the input, nothing invented, no engagement bait",
-      "files": [
-        "evals/files/legal-agent.md"
-      ],
+      "name": "Underspecified LinkedIn About",
+      "prompt": "Write my LinkedIn About.",
+      "expected_output": "A LinkedIn About section with room to develop a point of view, not an X-length post.",
+      "files": ["evals/files/positioning.md", "evals/files/legal-agent.md"],
       "expectations": [
-        "The output is two to four connected spoken sentences with no headings, lists, markdown, or URLs",
-        "The output names at least two shipped voice details from the input: OpenAI's Realtime API, bilingual voice, realtime transcription, speech synthesis, or the React Native Expo app",
-        "The output states nothing the input doesn't, such as a user count, a metric, or an unlisted feature",
-        "The output is a spoken explanation without a promotional sign-off or invented reaction",
-        "The sentences are easy to follow aloud and preserve their logical connections"
+        "The About section is substantially longer than 280 characters",
+        "The section is not formatted as a pair of short social posts labeled LinkedIn and X",
+        "Every project claim is supported by the fixtures; the draft does not add how a product was operated or who used it beyond those sources",
+        "The section does not open or close by listing human experience, agent access, and operations together as its frame",
+        "The section does not insert W-2 terms or a booking CTA unless the brief requests hiring outreach"
       ]
     },
     {
       "id": 4,
-      "prompt": "this hero sounds like AI, make the CTA convert.",
-      "expected_output": "A clear hero preserving relevant verified capability, with a plain booking CTA; no false urgency or unsupported promises.",
-      "files": [
-        "evals/files/ai-hero.md"
-      ],
+      "name": "Underspecified website intro",
+      "prompt": "Write a short introduction for my personal website.",
+      "expected_output": "A brief site introduction using supported facts; does not replace approved copy unless asked.",
+      "files": ["evals/files/positioning.md", "evals/files/legal-agent.md"],
       "expectations": [
-        "The output keeps or names one concrete fact already in the input: voice and chat, retrieval, or the line between the model and application logic",
-        "The output includes a call to action that books a call at /cal or https://gaboesquivel.com/cal",
-        "Every sentence reads on the first pass: no clause is wedged into a list item",
-        "The copy communicates a relevant capability or human benefit rather than generic AI praise",
-        "The output uses no false urgency or unsupported promise",
-        "The output invents no metric"
+        "The draft identifies Gabo or the Agentic Product Engineer role using supported material",
+        "The draft does not paste the two approved website paragraphs verbatim unless asked to use approved copy",
+        "The draft invents no metrics, endorsements, or achievements beyond the fixtures",
+        "The introduction is short enough for a website hero or intro block (roughly under 120 words unless the brief implied otherwise)"
       ]
     },
     {
       "id": 5,
-      "prompt": "humanize this post.",
-      "expected_output": "Remove unsupported feelings, false scope, vague authorities, and repetitive promotion while preserving the verified LegalAgent capabilities. Humanize through clarity and reader relevance rather than invented autobiography.",
-      "files": [
-        "evals/files/humanize-draft.md",
-        "evals/files/legal-agent.md"
-      ],
+      "name": "Underspecified conference bio",
+      "prompt": "Write a conference biography for me.",
+      "expected_output": "Third-person conference biography with supported facts.",
+      "files": ["evals/files/positioning.md", "evals/files/legal-agent.md"],
       "expectations": [
-        "The output removes unsupported personal milestones, emotional claims, vague expert authority, and inflated significance",
-        "The output drops the false range 'from chat to blockchain to compliance' and claims nothing about blockchain or compliance",
-        "The output replaces the repetitive model-versus-product refrain with useful substance or omits it",
-        "The output keeps these facts: LegalAgent, attorneys, case context, voice or chat, Spanish or English",
-        "The output invents no anecdote, feeling, quote, or user outcome",
-        "The prose connects the capabilities into an understandable explanation"
+        "The biography uses third person",
+        "The biography includes the approved Agentic Product Engineer title or equivalent from the positioning fixture",
+        "Named projects and experience match the fixtures; no invented credentials appear",
+        "The biography is appropriate conference length (more than one sentence, typically under 150 words)"
       ]
     },
     {
       "id": 6,
-      "prompt": "this paragraph is one breath — break it up so it sounds like me, keep every verified fact",
-      "expected_output": "Break the stacked sentence into readable connected prose while retaining every specified implementation fact and the attorney-feedback loop.",
-      "files": [
-        "evals/files/legal-agent-stacked.md",
-        "evals/files/legal-agent.md"
-      ],
+      "name": "Underspecified Alex reply",
+      "prompt": "Reply to Alex about what I'm working on.",
+      "expected_output": "A peer-appropriate reply to Alex's question using supported work facts.",
+      "files": ["evals/files/alex-peer.md", "evals/files/legal-agent.md", "evals/files/positioning.md"],
       "expectations": [
-        "The output is not a single long sentence with three or more comma- or while-linked clauses carrying distinct shipped facts",
-        "The output keeps voice and chat in LegalAgent's React Native Expo app, the Vercel AI SDK for chat, OpenAI's Realtime API for voice, Tailwind on the multimodal UI, RAG for case context, document summaries, and procedural guidance in Spanish and English, and attorney feedback changing persona and tool calling in the Expo client",
-        "The output states no metric, user count, quote, reaction, or outcome that the input files do not contain",
-        "The output adds no unsupported personal reflection or claim",
-        "The prose preserves technical relationships while improving readability"
+        "The message answers what Gabo is working on using supported project facts",
+        "The message invents no familiarity with Alex beyond the supplied fixture",
+        "The message does not insert W-2 availability terms or https://gaboesquivel.com/cal unless the brief is clearly a hiring or booking conversation",
+        "The message is proportionate outreach length (typically under 150 words)"
       ]
     },
     {
       "id": 7,
-      "name": "Personal website introduction",
-      "prompt": "Write a fresh personal website introduction for Gabo, up to 90 words, for founders and product leaders. Use the approved positioning as reference; do not replace or edit the approved copy.",
-      "expected_output": "Personal website introduction adapted to the requested audience and constraints, using supported facts and the approved positioning.",
-      "files": [
-        "evals/files/positioning.md",
-        "evals/files/legal-agent.md"
-      ],
+      "name": "Observation light edit",
+      "prompt": "Light edit for flow only — keep my observation and meaning: I keep noticing that a product can have impressive capabilities and still make a simple task feel like work. I'm more interested in whether someone can finish what they came to do.",
+      "expected_output": "Flow improved; the noticing and finish-what-they-came-to-do ideas remain.",
+      "files": ["evals/files/observation-synthetic.md"],
       "expectations": [
-        "The draft reflects human usefulness, appropriate agent access, and practical operation as connected product concerns",
-        "The draft does not replace the supplied approved copy or claim invented outcomes",
-        "The draft is at most 90 words and readable by founders and product leaders"
+        "The output preserves that impressive capabilities can still make a simple task feel like work",
+        "The output preserves interest in whether someone can finish what they came to do",
+        "The output does not replace the observation with a generic three-pillar product essay",
+        "The output invents no anecdote, metric, or named product the user did not supply"
       ]
     },
     {
       "id": 8,
-      "name": "Professional biography",
-      "prompt": "Write a third-person professional biography for Gabo, up to 110 words, for a product conference. Include one relevant verified project.",
-      "expected_output": "Professional biography adapted to the requested audience and constraints, using supported facts and the approved positioning.",
-      "files": [
-        "evals/files/positioning.md",
-        "evals/files/legal-agent.md"
-      ],
+      "name": "Observation broader rewrite",
+      "prompt": "Rewrite this in my voice for a short blog paragraph — keep the observation, you can restructure: I keep noticing that a product can have impressive capabilities and still make a simple task feel like work. I'm more interested in whether someone can finish what they came to do.",
+      "expected_output": "Readable paragraph that keeps the supplied observation as the point.",
+      "files": ["evals/files/observation-synthetic.md"],
       "expectations": [
-        "The biography uses third person and the approved Agentic Product Engineer title",
-        "The experience and named project are accurate; no invented credentials or metrics appear",
-        "The biography is at most 110 words and connects experience with product judgment"
+        "The output preserves that impressive capabilities can still make a simple task feel like work",
+        "The output preserves interest in whether someone can finish what they came to do",
+        "The output does not replace the observation with a generic three-pillar product essay",
+        "The output invents no anecdote, metric, or named product the user did not supply"
       ]
     },
     {
       "id": 9,
-      "name": "LinkedIn About",
-      "prompt": "Write a LinkedIn About section for Gabo in 140–200 words. Explain his product philosophy and relevant experience for founders and collaborators.",
-      "expected_output": "LinkedIn About adapted to the requested audience and constraints, using supported facts and the approved positioning.",
-      "files": [
-        "evals/files/positioning.md",
-        "evals/files/legal-agent.md"
-      ],
+      "name": "Opinion short post",
+      "prompt": "Turn this into a short public post in my voice.",
+      "expected_output": "Short post preserving the opinion and reason about chat vs workflow AI.",
+      "files": ["evals/files/opinion-synthetic.md"],
       "expectations": [
-        "The About section is 140–200 words, rather than a short X-shaped post",
-        "The section connects the three product pillars and uses supported experience",
-        "The writing conveys a point of view without invented personal history or unsupported performance claims"
+        "The output preserves that not every product needs a chat interface",
+        "The output preserves that AI can help by making an existing workflow shorter and easier to understand",
+        "The output does not add unsupported certainty, a combative tone, or a formulaic it-is-not-X-it-is-Y closer as the main ending",
+        "The output invents no customer story, metric, or employer claim"
       ]
     },
     {
       "id": 10,
-      "name": "Product launch announcement",
-      "prompt": "Draft a retrospective product launch announcement about Gabo’s LegalAgent voice and chat work for a mixed product and engineering audience, up to 120 words. Do not invent a release date or availability.",
-      "expected_output": "Product launch announcement adapted to the requested audience and constraints, using supported facts and the approved positioning.",
-      "files": [
-        "evals/files/positioning.md",
-        "evals/files/legal-agent.md"
-      ],
+      "name": "Agent disagreement reply",
+      "prompt": "Write a concise reply to my colleague.",
+      "expected_output": "Concise reply preserving agreement, practical disagreement, and the staged expansion reason.",
+      "files": ["evals/files/agent-disagreement-synthetic.md"],
       "expectations": [
-        "The announcement makes voice/chat and the attorney use case understandable before or alongside implementation",
-        "The draft retains accurate contribution and languages when mentioned",
-        "No new release date, current availability, quantified benefit, or customer quote is invented; length is at most 120 words"
+        "The output agrees that agents should be first-class users",
+        "The output recommends starting with capabilities where permissions, outcomes, and failure recovery are clear",
+        "The output mentions expanding based on how people and agents actually use them",
+        "The tone is direct and practical rather than evasive, preachy, or overly formal",
+        "The output invents no real colleague name, company policy, or shipped project as proof"
       ]
     },
     {
       "id": 11,
-      "name": "Agentic product concept",
-      "prompt": "Explain Gabo’s idea of designing software for humans and agents to a nontechnical product leader, up to 160 words. Use one clearly hypothetical example; distinguish the design proposal from shipped work.",
-      "expected_output": "Agentic product concept adapted to the requested audience and constraints, using supported facts and the approved positioning.",
-      "files": [
-        "evals/files/positioning.md",
-        "evals/files/legal-agent.md"
-      ],
-      "expectations": [
-        "The explanation is accessible to a nontechnical product leader and at most 160 words",
-        "The example is explicitly hypothetical, not presented as shipped work",
-        "Human use, agent capability, and operational concerns connect to the same product; tools are not treated as a mandatory checklist"
-      ]
-    },
-    {
-      "id": 12,
-      "name": "Technical architecture explanation",
+      "name": "Technical architecture",
       "prompt": "Explain the shipped LegalAgent architecture to a senior engineer, up to 220 words. Preserve the app, chat and voice technologies, retrieval responsibilities and languages, admin controls, and feedback loop. Flag any unspecified reliability or authorization details instead of inventing them.",
-      "expected_output": "Technical architecture explanation adapted to the requested audience and constraints, using supported facts and the approved positioning.",
-      "files": [
-        "evals/files/positioning.md",
-        "evals/files/legal-agent.md"
-      ],
+      "expected_output": "Accurate architecture with gaps named, not filled in.",
+      "files": ["evals/files/legal-agent.md"],
       "expectations": [
         "The explanation retains React Native Expo, Vercel AI SDK chat, OpenAI Realtime API voice, Tailwind UI, retrieval for case context/document summaries/procedural guidance in Spanish and English, and TanStack Start admin with Microsoft SSO, prompt management, and document categorization",
         "Attorney feedback changing persona and tool calling is preserved",
@@ -191,39 +149,10 @@
       ]
     },
     {
-      "id": 13,
-      "name": "Short social post",
-      "prompt": "Write one short social post in Gabo’s voice about LegalAgent voice and chat, under 280 characters including this exact link: https://gaboesquivel.com/blog/2026-10-legal-agent",
-      "expected_output": "Short social post adapted to the requested audience and constraints, using supported facts and the approved positioning.",
-      "files": [
-        "evals/files/positioning.md",
-        "evals/files/legal-agent.md"
-      ],
-      "expectations": [
-        "The post is under 280 characters including the exact supplied URL",
-        "The post describes supported LegalAgent work without invented outcomes",
-        "The post has an understandable point, not merely a technology inventory"
-      ]
-    },
-    {
-      "id": 14,
-      "name": "Professional outreach",
-      "prompt": "Write a professional outreach message to Alex, under 100 words, responding to their question about what Gabo works on and inviting an exchange of notes on agent-friendly products. This is a peer conversation, not a hiring pitch.",
-      "expected_output": "Professional outreach adapted to the requested audience and constraints, using supported facts and the approved positioning.",
-      "files": [
-        "evals/files/positioning.md",
-        "evals/files/legal-agent.md"
-      ],
-      "expectations": [
-        "The message addresses Alex’s stated question and invites an exchange of notes",
-        "The message invents no familiarity, company context, hiring need, or recipient praise",
-        "The message does not insert W-2 terms or a booking CTA into the peer exchange and is under 100 words"
-      ]
-    },
-    {
-      "id": 15,
+      "id": 12,
+      "name": "Punctuation-only edit",
       "prompt": "Edit only punctuation in this sentence; keep my reflection and qualifier: I often return to one question how can this feel simpler for the person using it?",
-      "expected_output": "Only the punctuation changes; the user’s supplied reflection, question, and qualifier remain.",
+      "expected_output": "Only punctuation changes; reflection and qualifier remain.",
       "files": [],
       "expectations": [
         "The words and their order are unchanged",
@@ -232,12 +161,11 @@
       ]
     },
     {
-      "id": 16,
+      "id": 13,
+      "name": "Verbatim approved copy",
       "prompt": "Return the approved website copy exactly as provided, with its two paragraphs. Do not introduce or explain it.",
-      "expected_output": "Verbatim approved website copy, without quotation marks added around the paragraphs or other text.",
-      "files": [
-        "evals/files/positioning.md"
-      ],
+      "expected_output": "Verbatim approved website copy only.",
+      "files": ["evals/files/positioning.md"],
       "expectations": [
         "Both approved paragraphs are preserved verbatim",
         "No commentary, rewrites, biography, or motto is added"
