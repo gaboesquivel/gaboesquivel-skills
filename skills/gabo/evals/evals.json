@@ -4,61 +4,74 @@
     {
       "id": 1,
       "prompt": "rewrite this draft so it sounds like gabo, not a pitch deck — keep only claims I already verified",
-      "expected_output": "Voice held, no invented metrics, no memoir, no pitch-deck language, sentences connected",
-      "files": [],
+      "expected_output": "The same draft rewritten: all three verified LegalAgent and Wink facts kept, the invented metric and outcome cut, nothing added from the Identity list, no pitch-deck, memoir, faux-insight, weasel, or dramatic-colon language, connected sentences",
+      "files": ["evals/files/pitch-draft.md", "evals/files/legal-agent.md"],
       "expectations": [
-        "The output invents no metric, user count, quote, or outcome",
-        "The output contains none of these memoir words: passion, journey, moment of realization, personal milestone, what struck me",
-        "The output contains none of these pitch-deck words: robust, cutting-edge, seamless, leverage, delve, empower",
-        "The output does not place three or more short independent sentences in a row"
+        "The output drops the claim that attorney research time fell by 60%, which no input supports",
+        "The output keeps all three verified facts from the draft: voice and chat in LegalAgent's React Native Expo app, RAG for case context, document summaries, and procedural guidance, and leading engineering for Wink from architecture to launch",
+        "The output adds nothing from the Identity list (years of experience, languages, time zone, engagement terms, the public role \"Agentic Product Engineer\", or a stack list)",
+        "The output contains none of these words: visionary, world-class, leverage, cutting-edge, seamless, empower, passionate",
+        "The output drops the faux-insight opener 'Here's the thing', the weasel word 'many', and the dramatic colon 'The result:'",
+        "The output never has three or more consecutive independent sentences under eight words each"
       ]
     },
     {
       "id": 2,
-      "prompt": "draft a linkedin post about context engineering vs prompt engineering — i want it to sound like me (gabo), not generic AI influencer stuff",
-      "expected_output": "A few flowing paragraphs, connected sentences, no memoir, no invented metric",
-      "files": [],
+      "prompt": "linkedin and x https://gaboesquivel.com/blog/2026-10-legal-agent",
+      "expected_output": "The piece's hero image, then one paragraph of one or two connected sentences on one verified fact from the piece, then the piece URL as the last line. Paragraph plus URL under 280 characters. Nothing invented, no engagement bait, no Dub or link-creation call.",
+      "files": ["evals/files/legal-agent-post.md"],
       "expectations": [
-        "The output is a few connected paragraphs, not a stack of one-line paragraphs",
-        "The output contains none of these memoir words: passion, journey, moment of realization, personal milestone",
-        "The output invents no metric, user count, or quote",
-        "The output does not place three or more short independent sentences in a row"
+        "The hero image from the piece is named",
+        "The output is one paragraph of one or two connected sentences, not two or more paragraphs",
+        "That paragraph uses one verified fact from the piece",
+        "The piece URL from the prompt is the last line, and no other link is substituted for it",
+        "The paragraph plus the link is under 280 characters",
+        "The output states nothing the piece does not contain: no metric, user count, quote, or reaction",
+        "The output has no engagement bait",
+        "The output never has three consecutive independent sentences under eight words",
+        "The transcript shows no Dub API, MCP, or link-creation call"
       ]
     },
     {
       "id": 3,
       "prompt": "say this out loud as a voice-agent line: what I actually shipped on voice for LegalAgent, no engagement bait",
-      "expected_output": "A few connected sentences, tighter than a blog, no invented users, no engagement bait",
-      "files": [],
+      "expected_output": "Two to four connected spoken sentences naming shipped voice details from the input, nothing invented, no engagement bait",
+      "files": ["evals/files/legal-agent.md"],
       "expectations": [
-        "The output is a few sentences, not a post with sections or headings",
-        "The output invents no user count, quote, or metric",
-        "The output has no engagement bait: no rhetorical question, no 'I hope this helps', no follow-for-more",
-        "The output does not place three or more short independent sentences in a row"
+        "The output is two to four connected spoken sentences with no headings, lists, markdown, or URLs",
+        "The output names at least two shipped voice details from the input: OpenAI's Realtime API, bilingual voice, realtime transcription, speech synthesis, or the React Native Expo app",
+        "The output states nothing the input doesn't, such as a user count, a metric, or an unlisted feature",
+        "The output has no engagement bait: no rhetorical question, no 'I hope this helps', no follow-for-more line",
+        "The output never has three or more consecutive independent sentences under eight words each"
       ]
     },
     {
       "id": 4,
       "prompt": "this hero sounds like AI, make the CTA convert.",
-      "expected_output": "Site copy with one verified shipped fact, no headline formula, no rhetorical question, no invented metric",
+      "expected_output": "The hero keeps its verified parts and reads on the first pass, followed by a plain CTA that books a call at /cal: no headline formula, rhetorical question, false urgency, or invented metric",
       "files": ["evals/files/ai-hero.md"],
       "expectations": [
         "The output keeps or names one concrete fact already in the input: voice and chat, retrieval, or the line between the model and application logic",
+        "The output includes a call to action that books a call at /cal or https://gaboesquivel.com/cal",
+        "Every sentence reads on the first pass: no clause is wedged into a list item",
         "The output uses no headline formula such as How to, N ways to, or The secret to",
         "The output asks no rhetorical question",
+        "The output uses no false urgency, such as limited spots, act now, or don't miss out",
         "The output invents no metric"
       ]
     },
     {
       "id": 5,
       "prompt": "humanize this post.",
-      "expected_output": "Seeded tells removed, facts unchanged, no memoir or mixed-feelings replacement, no three short sentences in a row",
-      "files": ["evals/files/humanize-draft.md"],
+      "expected_output": "Every seeded tell removed, including the false range and the refrain, the verified facts unchanged, no memoir or mixed-feelings replacement, no three short sentences in a row",
+      "files": ["evals/files/humanize-draft.md", "evals/files/legal-agent.md"],
       "expectations": [
-        "The output removes these seeded tells: Moreover, cutting-edge, showcasing, I hope this helps, moment of realization, journey, experts believe, testament, evolving landscape",
+        "The output removes these seeded tells: What struck me, journey, moment of realization, particularly meaningful, personal milestone, reinforced, passion, Moreover, serves as, robust, cutting-edge, showcasing, highlighting, The key point is, With this setup complete, experts believe, pivotal, testament, evolving landscape, I hope this helps",
+        "The output drops the false range 'from chat to blockchain to compliance' and claims nothing about blockchain or compliance",
+        "The output drops the refrain 'it's not about the model. It's about the product. That is the work.'",
         "The output keeps these facts: LegalAgent, attorneys, case context, voice or chat, Spanish or English",
         "The output adds no mixed-feelings framing and no memoir replacement such as honestly, messy, I remember, or what struck me",
-        "The output does not place three or more short independent sentences in a row"
+        "The output never has three or more consecutive independent sentences under eight words each"
       ]
     }
   ]

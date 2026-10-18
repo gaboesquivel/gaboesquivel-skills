@@ -1,6 +1,6 @@
 # Tells
 
-Check the finished draft against this list. A match is a tell. Fix it by restoring the Voice rule named in the heading, then revert any change that is not a tell removed, a fact corrected, or a flow break joined.
+Check the finished draft against this list. A match is a tell, and you fix it by restoring the Voice rule named in its heading. Citations, `I would`, and ordinary metaphor are not tells.
 
 ## Active voice
 
@@ -14,7 +14,7 @@ Check the finished draft against this list. A match is a tell. Fix it by restori
 - Chatbot and flattery: `I hope this helps`, `Great question`, `Certainly`, `Of course`, `I'd be happy to`, `let me know if you need anything else`.
 - Promotional adjectives: `seamless`, `powerful`, `innovative`, `next-generation`, `world-class`, `game-changing`, `best-in-class`.
 - Marketing verbs: `delve`, `leverage`, `utilize`, `robust`, `cutting-edge`, `streamline`, `empower`.
-- Pitch-deck, thought-leader, or growth-hacker tone, including a headline formula (`How to…`, `N ways to…`, `The secret to…`) and engagement bait. A rhetorical question used as a hook is engagement bait.
+- Pitch-deck, thought-leader, or growth-hacker tone, including a headline formula (`How to…`, `N ways to…`, `The secret to…`), false urgency, and engagement bait. A rhetorical question used as a hook is engagement bait.
 - A printable domain CV: a stack list or a career summary standing in for the piece.
 
 ## Facts and decisions
@@ -54,10 +54,6 @@ Evidence is what was built, decided, constrained, or learned through implementat
 - A synonym that recreates the same motivational-memoir structure after the words above are cut.
 - A section closed with a lesson, principle, belief, takeaway, or proverb. Evidence can end on the fact.
 
-## Portability
+## Portability and second read
 
-- A sentence that could move unchanged onto another engineer's site. Cut it or replace it with a fact already in the draft.
-
-## Second read
-
-- A sentence that hides the subject, the action, or the consequence. Name all three.
+- A sentence that fails the portability test or the second-read test in Voice.

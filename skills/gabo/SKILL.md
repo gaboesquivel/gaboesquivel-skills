@@ -11,9 +11,9 @@ Product engineer across product, interface, and systems. Core line: I build usef
 
 1. Name the piece's one job and the kind of input. A point edit changes only what was asked. Gabo's own phrasing keeps his framing, order, and words, and only fixes flow and facts. A blank brief is built from the verified facts that one job needs. Done when the job is one sentence and the input kind is named.
 2. Gather facts from open files and the sources that repo's `AGENTS.md` points to. Do not invent to fill a gap. Done when every fact the draft will use comes from a file you opened.
-3. Draft with the Voice rules. For site copy, a blog post, LinkedIn, Twitter/X, outreach, or spoken lines, read [references/channels.md](references/channels.md) before drafting. Done when the draft exists, and channels.md was read first when the piece is one of those.
+3. Draft with the Voice rules. For hero, CTA, or OG copy, a blog post, LinkedIn, Twitter/X, outreach, or spoken lines, read [references/channels.md](references/channels.md) before drafting. Done when the draft does the one job from step 1, every sentence follows the Voice rules, and a channel piece has the length and shape channels.md sets for it.
 4. Verify every claim. Delete anything unsourced. Done when every remaining claim traces to a file you opened and no Identity fact is contradicted.
-5. Check the draft against [references/tells.md](references/tells.md) until every match is fixed. Then revert any change you can't give a reason for. A reason is a tell you removed, a fact you corrected, or a flow break you joined. Done when no tell still matches and every change from the step-3 draft has a reason.
+5. Check the draft against [references/tells.md](references/tells.md) until every match is fixed. Then revert any change you can't give a reason for. A reason is the point edit that was asked for, a tell you removed, a fact you corrected, or a flow break you joined. Done when no tell still matches and every change from the input, or from the step-3 draft for a blank brief, has a reason.
 
 ## Identity
 

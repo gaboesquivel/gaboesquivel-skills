@@ -23,7 +23,7 @@ Gabo Esquivel Agent Skills catalog: how its skills are laid out, added, changed,
 
 - Behavior: update `SKILL.md` and the `references/` it discloses. Update `evals/evals.json` when expected output changes.
 - Triggers: update the frontmatter `description` and `evals/trigger-queries.json`.
-- Before pushing a change that adds, moves, or removes a rule or method step, or edits the description, run `evals/evals.json` against the previous version.
+- Before pushing a change that adds, moves, or removes a rule or method step, or edits the description, run `evals/evals.json` against the previous version and grade every run against its `expectations`.
 - gaboesquivel.com and the gaboesquivel package record installed skills in `skills-lock.json`. After pushing, run `bunx skills@latest update gabo -p -y` in each writing repo and commit the lock.
 
 Keep consumer-repo rules out of skills. Site routes, page jobs, and package field rules live in those repos' docs, starting at their `AGENTS.md`.
