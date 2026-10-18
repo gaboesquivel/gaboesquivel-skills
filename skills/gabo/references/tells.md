@@ -31,11 +31,18 @@ Check the finished draft against this list. A match is a tell, and you fix it by
 - Inflated symbolism: `testament`, `evolving landscape`, `underscore`, `pivotal moment`.
 - A trailing `-ing` phrase that adds fake depth: `showcasing`, `highlighting`, `underscoring`, `reflecting`, `emphasizing` hung on the end of a sentence.
 
+## Said aloud
+
+- A subordinate chain you would not say in one breath.
+- A dash or colon whose only job is the reveal. A short aside, and a colon that introduces a real list, stay.
+- A question used as the hook or the closer. A question the next sentence answers with a concrete behavior stays.
+- A rewrite that only raises the register, smoothing a plain sentence into a formal one.
+
 ## Connected sentences
 
 - Staccato: three or more consecutive short independent sentences, or one-line paragraphs stacked.
 - An inversion refrain whose only job is to reject a frame and announce the real one, especially as its own paragraph or a closer. A contrast stays when both sides name a concrete boundary.
-- A dramatic colon: a noun phrase, a colon, then the reveal.
+- A dramatic colon: a noun phrase, a colon, then the reveal, when the colon does not introduce a real list.
 - A summary transition (`With this setup complete…`), a stop-start fragment, or a cold open whose first sentence has no antecedent.
 - Conjunctive glue: `Moreover`, `Additionally`, `Furthermore`.
 - A rule-of-three stack, or an em dash used as a sales punch.
@@ -51,6 +58,6 @@ Check the finished draft against this list. A match is a tell, and you fix it by
 - A synonym that recreates the same motivational-memoir structure after the words above are cut.
 - A section closed with a lesson, principle, belief, takeaway, or proverb. Evidence can end on the fact.
 
-## Portability and second read
+## Portability and read aloud
 
-- A sentence that fails the portability test or the second-read test in Voice.
+- A sentence that fails the portability test or the read-aloud test in Voice.

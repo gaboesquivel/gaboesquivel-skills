@@ -73,6 +73,19 @@
         "The output adds no mixed-feelings framing and no memoir replacement such as honestly, messy, I remember, or what struck me",
         "The output never has three or more consecutive independent sentences under eight words each"
       ]
+    },
+    {
+      "id": 6,
+      "prompt": "this paragraph is one breath — break it up so it sounds like me, keep every verified fact",
+      "expected_output": "The stacked LegalAgent sentence split into sayable sentences with every shipped fact kept, a spoken relation or new sentence where one fact depends on another, nothing invented, no memoir replacement, no three short independent sentences in a row",
+      "files": ["evals/files/legal-agent-stacked.md", "evals/files/legal-agent.md"],
+      "expectations": [
+        "The output is not a single long sentence with three or more comma- or while-linked clauses carrying distinct shipped facts",
+        "The output keeps voice and chat in LegalAgent's React Native Expo app, the Vercel AI SDK for chat, OpenAI's Realtime API for voice, Tailwind on the multimodal UI, RAG for case context, document summaries, and procedural guidance in Spanish and English, and attorney feedback changing persona and tool calling in the Expo client",
+        "The output states no metric, user count, quote, reaction, or outcome that the input files do not contain",
+        "The output adds no memoir replacement such as journey, passion, what struck me, moment of realization, or particularly meaningful",
+        "The output never has three or more consecutive independent sentences under eight words each"
+      ]
     }
   ]
 }
