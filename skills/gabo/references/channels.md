@@ -1,31 +1,35 @@
 # Channels
 
-Site routes, blog IA, and package field lengths live in those repos' docs; start at their `AGENTS.md`.
+Use the requested audience, format, and length. The guidance below supplies defaults, not a mandatory structure. Destination repo docs own site routes, page jobs, and package fields.
 
-Start from one real, already-verified fact: a shipped feature, a decision made, a problem solved. One source can become several pieces. Rewrite each for its channel.
+## Website, hero, CTA, and metadata
 
-## Hero, CTA, and OG copy
+Make the product focus or relevant capability understandable first. Add proof where it helps; every short field need not carry a shipped fact. Give a CTA a clear action and destination appropriate to the page. Preserve approved copy unless asked to rewrite it. Use `/cal` or https://gaboesquivel.com/cal when the intended action is booking a call.
 
-One job, one verified shipped fact.
+## Biography and LinkedIn About
 
-## Blog
+Connect role, product philosophy, and relevant experience for the reader. Use a third-person bio when requested; first person usually fits an About section. Select supporting projects rather than inventorying the stack. Give LinkedIn About enough space to explain a point of view; it is not an X post.
 
-Open on the concrete situation or the claim. Keep paragraphs to two to four sentences you could say aloud. End on the last decision, constraint, or action. Go deeper on implementation than social copy. Spell an acronym out the first time it appears. Every code block gets a sentence in the prose that says what it does. A recommendation in a list is a full sentence.
+## Blog and technical explanations
 
-Post titles are title case. H2 and H3 are sentence case and name what the section contains. `Takeaways`, `Overview`, `Notes`, and `Conclusion` are not headings.
+Build an argument the reader can follow. Ground unfamiliar concepts before relying on them; explain acronyms when the audience needs it. Use examples and implementation detail in proportion to the topic. Technical architecture writing should preserve boundaries, dependencies, failure modes, and uncertainty supported by the source. A conclusion may state an earned implication, open question, or next action.
 
-A list stays when each item is a concrete part. Introduce a list with a colon. A bold label is fine when the words after it say what the part does.
+Use descriptive headings and paragraphs shaped by the argument. Default to title case for post titles and sentence case for section headings, subject to the destination's conventions. Explain what code examples demonstrate. Lists suit parallel items; prose suits a developing argument.
 
-## LinkedIn and Twitter/X
+## Product announcements
 
-The usual brief is a link to the piece. Open that piece.
+Lead with what people can now do and why it matters, then explain Gabo's contribution and relevant technical choices. Distinguish shipped capability from planned work. Use availability, dates, metrics, quotes, and calls to try a product only when supplied or verified. A retrospective draft must not imply a new release today.
 
-Done when the handback is the hero image line, then one paragraph of one or two sentences built on one verified fact from the piece, each fitting one breath, then the link, and the paragraph plus link is under 280 characters. Name the image beside the text so it can be attached. That image line is part of the draft you hand back and sits outside the 280-character count. When a short link came with the brief, the link line is that short link. A piece URL on its own is the link line.
+## LinkedIn posts and X
+
+When sharing a source piece, read it and select a useful angle. LinkedIn can develop the idea with context; X normally needs a single compact point. When both are requested, provide separately adapted versions unless a shared draft is requested.
+
+For a standard short X post, default to at most 280 characters including the supplied link; honor an explicit tighter limit. Keep supplied URLs, including short links, unchanged. Identify a source hero image separately when sharing the article and one is available; do not invent an image or create a short link. Questions and invitations should invite a relevant exchange rather than manufacture engagement.
 
 ## Outreach
 
-Done when the draft has the Identity engagement terms, one verified shipped fact, and the ask at https://gaboesquivel.com/cal.
+Connect the reason for reaching out to the recipient's known context and make a proportionate ask. Include experience, engagement terms, or the calendar link when relevant to a hiring or collaboration conversation. A peer exchange, thank-you, or follow-up need not become a sales pitch. Personalize only from supplied or verified information.
 
 ## Spoken or voice-agent
 
-Two to four sentences you could say aloud, each fitting one breath, with no headings, lists, or links.
+Use conversational sentences that are easy to say and follow. Two to four sentences often suit a short answer; adapt to the requested duration and substance. Render a spoken script without visual formatting or raw URLs unless the task calls for them.
