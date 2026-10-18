@@ -1,6 +1,6 @@
 # Tells
 
-Check the finished draft against this list. A match is a tell, and you fix it by restoring the Voice rule named in its heading. Citations, `I would`, and ordinary metaphor are not tells.
+Check the finished draft against this list. A match is a tell, and you fix it by restoring the Voice rule named in its heading.
 
 ## Active voice
 
@@ -12,8 +12,7 @@ Check the finished draft against this list. A match is a tell, and you fix it by
 - Filler: `easy`, `simple`, `quick`, `very`, `just`, `really`. Replace one with a specific claim already in the draft.
 - A joke or a twist chased for its own sake.
 - Chatbot and flattery: `I hope this helps`, `Great question`, `Certainly`, `Of course`, `I'd be happy to`, `let me know if you need anything else`.
-- Promotional adjectives: `seamless`, `powerful`, `innovative`, `next-generation`, `world-class`, `game-changing`, `best-in-class`.
-- Marketing verbs: `delve`, `leverage`, `utilize`, `robust`, `cutting-edge`, `streamline`, `empower`.
+- Promotional and marketing diction: `seamless`, `powerful`, `innovative`, `next-generation`, `world-class`, `game-changing`, `best-in-class`, `delve`, `leverage`, `utilize`, `robust`, `cutting-edge`, `streamline`, `empower`.
 - Pitch-deck, thought-leader, or growth-hacker tone, including a headline formula (`How to…`, `N ways to…`, `The secret to…`), false urgency, and engagement bait. A rhetorical question used as a hook is engagement bait.
 - A printable domain CV: a stack list or a career summary standing in for the piece.
 
@@ -45,8 +44,6 @@ Check the finished draft against this list. A match is a tell, and you fix it by
 - A personified artifact, or template framing (`In today's world`, `When it comes to`).
 
 ## Evidence is what was built
-
-Evidence is what was built, decided, constrained, or learned through implementation. A feeling about the work is not evidence.
 
 - Memoir words: `passion`, `journey`, `reinforced`, `I remember when`, `I still remember`, `what struck me`, `this reinforced my belief`, `moment of realization`, `particularly meaningful`, `personal milestone`, `moment of transformation`, `deeply personal`, `personal connection`.
 - A personal-connection intro, a repeated chronology, or a moment of realization used as the frame.
