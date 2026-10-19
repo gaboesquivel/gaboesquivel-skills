@@ -1,1 +1,0 @@
-A product can ship impressive capabilities and still turn a simple task into work. I keep coming back to a simpler question: can someone finish what they came to do? That answer usually tells me more about the product than any feature list.

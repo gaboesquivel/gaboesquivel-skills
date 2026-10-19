@@ -1,1 +1,0 @@
-I don't think every product needs a chat interface. Often the better use of AI is to take an existing workflow and make it shorter, with fewer steps to decode. Meet people where they already work before you add another surface.

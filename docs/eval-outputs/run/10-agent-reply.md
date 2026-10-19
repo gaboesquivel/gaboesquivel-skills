@@ -1,1 +1,0 @@
-I agree agents should be first-class users. I'd still start with the capabilities where permissions, outcomes, and failure recovery are clear, then expand based on how people and agents actually use them.

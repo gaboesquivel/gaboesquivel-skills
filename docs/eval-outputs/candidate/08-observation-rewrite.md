@@ -1,1 +1,0 @@
-I keep noticing the same thing: a product can look capable and still turn a simple task into work. The feature list is rarely the problem. What I want to know is whether someone can finish what they came to do.
