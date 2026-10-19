@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..')
 const skillsRoot = join(root, 'skills')
-const namePattern = /^[a-z0-9-]+$/
+const namePattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
 const errors = []
 
 const parseFrontmatter = (content) => {
@@ -12,10 +12,17 @@ const parseFrontmatter = (content) => {
   if (!match) return null
 
   const block = match[1]
-  const name = block.match(/^name:\s*(.+)$/m)?.[1]?.trim()
-  const descriptionLine = block.match(/^description:\s*(.*)$/m)?.[1]?.trim()
+  const name = block.match(/^name:[ \t]*(.*)$/m)?.[1]?.trim()
+  const descriptionLine = block.match(/^description:[ \t]*(.*)$/m)?.[1]?.trim()
+  const lines = block.split(/\r?\n/)
+  const descriptionIndex = lines.findIndex((line) => line.startsWith('description:'))
+  const following = lines.slice(descriptionIndex + 1).find((line) => line.trim() && !line.trimStart().startsWith('#'))
+  const hasContinuation = following && !/^[a-zA-Z][\w-]*:/.test(following)
+  const unclosedQuote = descriptionLine?.startsWith('"')
+    ? !/^"(?:[^"\\]|\\.)*"(?:[ \t]+#.*)?$/.test(descriptionLine)
+    : descriptionLine?.startsWith("'") && !/^'(?:[^']|'')*'(?:[ \t]+#.*)?$/.test(descriptionLine)
 
-  return { name, descriptionLine }
+  return { name, descriptionLine, multilineDescription: hasContinuation || unclosedQuote }
 }
 
 const walkSkillFiles = async (dir, files = []) => {
@@ -44,7 +51,7 @@ for (const file of skillFiles) {
     continue
   }
 
-  const { name, descriptionLine } = frontmatter
+  const { name, descriptionLine, multilineDescription } = frontmatter
 
   if (!name) errors.push(`${rel}: missing name in frontmatter`)
   else if (name !== folderName)
@@ -55,7 +62,7 @@ for (const file of skillFiles) {
   else seenNames.add(name)
 
   if (!descriptionLine) errors.push(`${rel}: missing description in frontmatter`)
-  else if (descriptionLine === '|' || descriptionLine === '>')
+  else if (/^[|>]/.test(descriptionLine) || multilineDescription)
     errors.push(`${rel}: description must be a single line, not a YAML block`)
   else if (descriptionLine.length > 1024)
     errors.push(`${rel}: description exceeds 1024 characters (${descriptionLine.length})`)

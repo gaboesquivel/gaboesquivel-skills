@@ -5,6 +5,7 @@
   "type": "module",
   "description": "Gabo Esquivel Agent Skills catalog",
   "scripts": {
-    "validate": "bun scripts/validate-catalog.mjs"
+    "validate": "bun scripts/validate-catalog.mjs",
+    "test": "node --test scripts/*.test.mjs"
   }
 }

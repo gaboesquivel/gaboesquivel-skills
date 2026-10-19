@@ -170,6 +170,28 @@
         "Both approved paragraphs are preserved verbatim",
         "No commentary, rewrites, biography, or motto is added"
       ]
+    },
+    {
+      "id": 14,
+      "name": "Bounded article preparation",
+      "prompt": "Draft a short blog article in my voice from these notes: I think AI is most useful when it makes an existing workflow shorter and easier to understand. A chat interface is one option, not a requirement. Use a hypothetical document review example and label it as hypothetical. This is a draft only; no project claims or repository edits.",
+      "expected_output": "A draft grounded in the supplied opinion and a clearly hypothetical example, with preparation limited to relevant voice guidance.",
+      "files": [],
+      "expectations": [
+        "The agent starts drafting after reading relevant voice guidance; it does not scan the site, archive, project history, or framework code",
+        "The draft preserves the supplied opinion and labels the document review example as hypothetical",
+        "The draft invents no shipped project, metric, personal anecdote, or endorsement",
+        "The agent delivers the draft without repository edits or publishing checks"
+      ]
     }
-  ]
+  ],
+  "editorial_review": {
+    "method": "Compare actual outputs from the same prompts and facts. Grade expectations separately from editorial judgment. Cite a phrase for each preference; allow ties and retain failures. Synthetic fixtures demonstrate behavior, not Gabo’s biography.",
+    "questions": [
+      "Does the piece develop an intelligible point rather than list credentials or values?",
+      "Does it preserve the supplied conviction, curiosity, or enthusiasm without manufacturing new experience?",
+      "Do the sentences connect naturally, with detail proportionate to the reader?",
+      "Across formats, do openings and endings serve each piece rather than repeat a signature formula?"
+    ]
+  }
 }

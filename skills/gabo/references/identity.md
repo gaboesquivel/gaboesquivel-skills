@@ -14,7 +14,7 @@ Approved website copy:
 >
 > 15+ years of shipping software, including 12+ years building 0→1 products for startups and growth-stage teams across FinTech, Web3, and AI.
 
-Preserve this approved wording when using it; rewrite it only when explicitly asked. It is a positioning reference, not a template or motto to repeat in every piece. The three pillars below inform product judgment; they need not appear as a labeled trio in every bio, post, or reply.
+Preserve approved wording when asked to use it; rewrite it only when explicitly asked. A request for a new draft uses this as background.
 
 ## Product philosophy
 
