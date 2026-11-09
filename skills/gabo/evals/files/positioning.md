@@ -1,6 +1,6 @@
 # Approved positioning (eval fixture)
 
-Title: Gabo Esquivel — Agentic Product Engineer
+Title: Gabo Esquivel — Agentic Software Engineer
 
 Central philosophy (preserve verbatim when quoted):
 "Building software that is delightful for humans, accessible to agents, and efficient to operate."

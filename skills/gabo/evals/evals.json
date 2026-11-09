@@ -10,7 +10,7 @@
       "expectations": [
         "The output drops the claim that attorney research time fell by 60%, which no input supports",
         "The output keeps all three verified facts from the draft: voice and chat in LegalAgent's React Native Expo app, RAG for case context, document summaries, and procedural guidance, and leading engineering for Wink from architecture to launch",
-        "The output adds nothing from the Identity list (years of experience, languages, time zone, engagement terms, the public role \"Agentic Product Engineer\", or a stack list)",
+        "The output adds nothing from the Identity list (years of experience, languages, time zone, engagement terms, the public role \"Agentic Software Engineer\", or a stack list)",
         "The output replaces unsupported superlatives and generic promotion with the verified work rather than merely swapping synonyms",
         "The output makes no claim that users love the products and no unsupported claim about the author's feelings"
       ]
@@ -51,7 +51,7 @@
       "expected_output": "A brief site introduction using supported facts; does not replace approved copy unless asked.",
       "files": ["evals/files/positioning.md", "evals/files/legal-agent.md"],
       "expectations": [
-        "The draft identifies Gabo or the Agentic Product Engineer role using supported material",
+        "The draft identifies Gabo or the Agentic Software Engineer role using supported material",
         "The draft does not paste the two approved website paragraphs verbatim unless asked to use approved copy",
         "The draft invents no metrics, endorsements, or achievements beyond the fixtures",
         "The introduction is short enough for a website hero or intro block (roughly under 120 words unless the brief implied otherwise)"
@@ -65,7 +65,7 @@
       "files": ["evals/files/positioning.md", "evals/files/legal-agent.md"],
       "expectations": [
         "The biography uses third person",
-        "The biography includes the approved Agentic Product Engineer title or equivalent from the positioning fixture",
+        "The biography includes the approved Agentic Software Engineer title or equivalent from the positioning fixture",
         "Named projects and experience match the fixtures; no invented credentials appear",
         "The biography is appropriate conference length (more than one sentence, typically under 150 words)"
       ]
