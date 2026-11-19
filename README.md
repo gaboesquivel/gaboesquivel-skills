@@ -1,35 +1,24 @@
 # gaboesquivel-skills
 
-[Agent Skills](https://agentskills.io) catalog for Gabo Esquivel's voice and writing method. Install with the [skills CLI](https://github.com/vercel-labs/skills).
+**Moved.** The `gabo` skill now lives in [`skills/gabo/`](https://github.com/gaboesquivel/gaboesquivel/tree/master/skills/gabo) of [gaboesquivel/gaboesquivel](https://github.com/gaboesquivel/gaboesquivel), next to the `gaboesquivel` package's verified facts. This repository is kept for compatibility and is no longer updated.
 
-## Install
-
-**Project** (this repo, recorded in `skills-lock.json`):
+Install from the new location (same skill name, same `/gabo` invocation):
 
 ```bash
-npx skills@latest add gaboesquivel/gaboesquivel-skills --skill gabo -y
-pnpm dlx skills@latest add gaboesquivel/gaboesquivel-skills --skill gabo -y
-bunx skills@latest add gaboesquivel/gaboesquivel-skills --skill gabo -y
+npx skills@latest add gaboesquivel/gaboesquivel --skill gabo -y
 ```
 
-**Global** (every project on the machine):
+Global install:
 
 ```bash
-npx skills@latest add gaboesquivel/gaboesquivel-skills --skill gabo -g -y
-pnpm dlx skills@latest add gaboesquivel/gaboesquivel-skills --skill gabo -g -y
-bunx skills@latest add gaboesquivel/gaboesquivel-skills --skill gabo -g -y
+npx skills@latest add gaboesquivel/gaboesquivel --skill gabo -g -y
 ```
 
-A global install can still print `PromptScript does not support global skill installation`. The copy in `~/.agents/skills/gabo` is installed. PromptScript has no global directory, and `skills add -g -y` still targets it ([vercel-labs/skills#1352](https://github.com/vercel-labs/skills/issues/1352)).
-
-**List without installing:**
+To switch an existing project, remove the old entry and add the new one:
 
 ```bash
-npx skills@latest add gaboesquivel/gaboesquivel-skills --list
-pnpm dlx skills@latest add gaboesquivel/gaboesquivel-skills --list
-bunx skills@latest add gaboesquivel/gaboesquivel-skills --list
+npx skills@latest remove gabo -y
+npx skills@latest add gaboesquivel/gaboesquivel --skill gabo -y
 ```
 
-Canonical copies land in `.agents/skills/gabo/` for a project install and `~/.agents/skills/gabo/` for a global install. Distribution is GitHub only.
-
-Layout, authoring, and checks for maintainers: [AGENTS.md](AGENTS.md).
+Skill layout, checks, and maintenance steps: [AGENTS.md in gaboesquivel/gaboesquivel](https://github.com/gaboesquivel/gaboesquivel/blob/master/AGENTS.md).
